@@ -1,14 +1,38 @@
 package com.seroter.azure_basic_app;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import com.seroter.azure_basic_app.Event;
+import com.seroter.azure_basic_app.EventRepository;
+import java.util.List;
+import java.time.LocalDateTime;
 
 @RestController
 public class HelloController {
 
+	@Autowired
+	private EventRepository eventRepository;
+
 	@GetMapping("/")
 	public String index() {
 		return "Greetings from Spring Boot!";
+	}
+
+	// List all events
+	@GetMapping("/list")
+	public List<Event> getAllEvents() {
+		return eventRepository.findAll();
+	}
+
+	// Create a new event
+	@PostMapping("/add")
+	public Event createEvent(@RequestBody Event event) {
+		// Optionally set the date if not provided
+		if (event.getDate() == null) {
+			event.setDate(LocalDateTime.now());
+		}
+		return eventRepository.save(event);
 	}
 
 }
