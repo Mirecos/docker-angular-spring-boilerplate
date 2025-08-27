@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: Apache-2.0
  * Copyright Red Hat Inc. and Hibernate Authors
  */
-package com.seroter.azure_basic_app;
+package com.seroter.azure_basic_app.models;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.Column;

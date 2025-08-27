@@ -1,10 +1,12 @@
-package com.seroter.azure_basic_app;
+package com.seroter.azure_basic_app.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import com.seroter.azure_basic_app.Event;
-import com.seroter.azure_basic_app.EventRepository;
+
+import com.seroter.azure_basic_app.models.Event;
+import com.seroter.azure_basic_app.repository.EventRepository;
+
 import java.util.List;
 import java.time.LocalDateTime;
 
