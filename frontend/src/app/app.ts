@@ -7,6 +7,6 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
   selector: 'app-root',
   imports: [RouterOutlet, NzLayoutModule, NzMenuModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: ''
 })
 export class App {}
