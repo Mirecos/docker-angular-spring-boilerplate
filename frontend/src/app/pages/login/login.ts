@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-edit',
+  selector: 'app-login',
   imports: [],
-  templateUrl: './edit.html'
+  templateUrl: './login.html'
 })
-export class Edit {
+export class Login {
 
 }

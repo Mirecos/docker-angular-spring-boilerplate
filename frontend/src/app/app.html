@@ -1,7 +1,7 @@
 <nav class="bg-[#202A30] text-white px-6 py-4 flex gap-4 items-center">
-  <a href="/" class="text-white no-underline font-bold">Home</a>
-  <a href="/edit/1" class="text-white no-underline">Edit</a>
-  <a href="/article/1" class="text-white no-underline">Article</a>
+  <a [routerLink]="['/']" class="text-white no-underline font-bold">Home</a>
+  <a [routerLink]="['/edit', 1]" class="text-white no-underline">Edit</a>
+  <a [routerLink]="['/article', 1]" class="text-white no-underline">Article</a>
 </nav>
 <main class="p-8">
   <router-outlet />
